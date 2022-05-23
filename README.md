@@ -1,7 +1,7 @@
 # FinalProject
 
 
-###Steps in Completing Your Project
+### Steps in Completing Your Project
 
 
 1) Propose and Scope the Project
@@ -32,8 +32,6 @@ Include with your Linting step both a failed Linting screenshot and a successful
 Perform builds on your pipeline.
 Verify that your pipeline works as you designed it.
 Take a screenshot of the Circle CI or Jenkins pipeline showing deployment, and a screenshot of your AWS EC2 page showing the newly created (for blue/green) or modified (for rolling) instances. Make sure you name your instances differently between blue and green deployments.
-Submitting your Project
-Make sure you have taken all the screenshots you need, as directed above, and create a text file with a link to your GitHub repo.
 
-Zip up these screenshots and text file into a single doc, and this will constitute your project submission.
+
 
