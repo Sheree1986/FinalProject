@@ -57,7 +57,7 @@ jobs:
             if [[ `kubectl get deployment | grep fphelloworld` = *"fphelloworld"* ]]
             then
                   echo "i am in"
-                  kubectl rollout restart deployment/fp-helloworld-deployment
+                  kubectl rollout restart deployment/fp-hello_world-deployment
             else
                   echo "i am out"
                   sleep 10
