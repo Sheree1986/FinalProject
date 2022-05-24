@@ -60,6 +60,7 @@ jobs:
                   kubectl rollout restart deployment/fp-hello_world-deployment
             else
                   echo "i am out"
+                  kubectl apply -f ./fp_hello_world_service.yml
                   sleep 10
                   kubectl get service
                   kubectl apply -f fp_hello_world_deployment.yml
