@@ -24,12 +24,12 @@ jobs:
           name: docker code building 
           command: |   
             source ~/.devops/bin/activate          
-            docker build --tag=p_hello_world .
-            docker image ls	  
+            docker build --tag=fp_hello_world .
+            docker image ls
       - run:
-          name: docker code uploading  
+          name: docker code uploading
           command: |   
-            docker image ls	 
+            docker image ls
             docker login -u $DOCKER_USER -p $DOCKER_PASS
             docker tag fp_hello_world $DOCKER_USER/fp_hello_world
             docker push sheree1986/fp_hello_world:latest
