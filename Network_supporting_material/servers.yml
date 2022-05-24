@@ -35,19 +35,18 @@ Resources:
                   aws eks update-kubeconfig --name PROD --region us-east-1
           ImageId: !Ref AMI
           InstanceType: t2.medium          
-          KeyName: AWS_FPHW
+          KeyName: fp
           BlockDeviceMappings:
           - DeviceName: "/dev/sdk"
             Ebs:
              VolumeSize: '10'     
           NetworkInterfaces: 
-            - AssociatePublicIpAddress: "true"
+            - AssociatePublicIpAddress: "false"
               DeviceIndex: "0"
               GroupSet: 
                 - Ref: BastionSecurityGroup
               SubnetId: 
-                Fn::ImportValue:
-                    !Sub "${EnvironmentName}-PUB-SN"
+                Fn::ImportValue:!Sub "${EnvironmentName}-PUB-SN"
 
     BastionSecurityGroup:
         Type: AWS::EC2::SecurityGroup
