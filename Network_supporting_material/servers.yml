@@ -17,7 +17,7 @@ Resources:
     WebInstance:
         Type: AWS::EC2::Instance
         Properties:
-          KeyName: publicpublic
+          KeyName: 
           UserData:
               Fn::Base64: !Sub |
                   #!/bin/bash
@@ -35,18 +35,18 @@ Resources:
                   aws eks update-kubeconfig --name PROD --region us-east-1
           ImageId: !Ref AMI
           InstanceType: t2.medium          
-          KeyName: fp
+          KeyName: fp2
           BlockDeviceMappings:
           - DeviceName: "/dev/sdk"
             Ebs:
              VolumeSize: '10'     
           NetworkInterfaces: 
-            - AssociatePublicIpAddress: "false"
+            - AssociatePublicIpAddress: "true"
               DeviceIndex: "0"
               GroupSet: 
                 - Ref: BastionSecurityGroup
               SubnetId: 
-                Fn::ImportValue:!Sub "${EnvironmentName}-PUB-SN"
+                Fn::ImportValue: !Sub "${EnvironmentName}-PUB1-SN"
 
     BastionSecurityGroup:
         Type: AWS::EC2::SecurityGroup
@@ -135,4 +135,4 @@ Resources:
             - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
             - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
             - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
-            
+ 
