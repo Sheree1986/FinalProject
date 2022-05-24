@@ -31,7 +31,7 @@ jobs:
           command: |   
             docker image ls	 
             docker login -u $DOCKER_USER -p $DOCKER_PASS
-            docker tag sheree1986/fp_hello_world sheree1986/fp_hello_world
+            docker tag lastest $DOCKER_USER/fp_hello_world
             docker push sheree1986/fp_hello_world:latest
             
   deploy-docker-image:
