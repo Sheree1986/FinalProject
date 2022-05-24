@@ -54,8 +54,7 @@ jobs:
             chmod +x ./kubectl
             mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
             kubectl version --short --client
-            eksctl create cluster --name=fp-helloworld-cluster --nodes=2 --region=us-west-2
-            # aws eks update-kubeconfig --name PROD --region us-west-2       
+            aws eks update-kubeconfig --name PROD --region $REGION     
             if [[ `kubectl get deployment | grep fphelloworld` = *"fphelloworld"* ]]
             then
                   echo "i am in"
