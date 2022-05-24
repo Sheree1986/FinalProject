@@ -32,7 +32,7 @@ jobs:
             docker image ls	 
             docker login -u $DOCKER_USER -p $DOCKER_PASS
             docker tag fp_hello_world $DOCKER_USER/fp_hello_world
-            docker push sheree1986/fp_hello_world:latest
+         
             
   deploy-docker-image:
     docker:
