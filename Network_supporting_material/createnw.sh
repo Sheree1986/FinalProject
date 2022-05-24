@@ -1,5 +1,1 @@
-aws cloudformation create-stack 
---stack-name fp-hello-world
---parameters file://network-parameters.json
---template-body file://network.yml
---region=us-east-1
+ aws cloudformation create-stack  --stack-name fphelloworldnw --region us-east-1 --template-body file://network.yml  --parameters file://network-parameters.json

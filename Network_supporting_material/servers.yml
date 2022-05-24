@@ -1,18 +1,18 @@
 Description: >
-   Sheree Edmund / FinalProjectHelloWorld
-   EKS
+    Sheree Edmund 
+    Final Project Hello World Server
 
 Parameters:
 
     EnvironmentName:
         Description: An environment name that will be prefixed to resource names
         Type: String
-
+        
     AMI:
-        Description: AMI to use for our base image
+        Description: AMI
         Type: String
-Resources:
 
+Resources:
 
     WebInstance:
         Type: AWS::EC2::Instance
@@ -33,9 +33,9 @@ Resources:
                   curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
                   sudo mv /tmp/eksctl /usr/bin
                   aws eks update-kubeconfig --name PROD --region us-east-1
-          ImageId: !Ref AMItoUse
+          ImageId: !Ref AMI
           InstanceType: t2.medium          
-          KeyName: AWS_Intance
+          KeyName: AWS_FPHW
           BlockDeviceMappings:
           - DeviceName: "/dev/sdk"
             Ebs:
@@ -136,3 +136,4 @@ Resources:
             - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
             - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
             - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
+            
