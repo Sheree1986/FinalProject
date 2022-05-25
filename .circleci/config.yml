@@ -12,13 +12,13 @@ jobs:
           command: |
             python3 -m venv ~/.devops
             source ~/.devops/bin/activate
-     - run:
+      - run:
           name: code linting 
           command: |      
             source ~/.devops/bin/activate
             make install
-            make lint   
-            ji
+             make lint   
+             kk
       - setup_remote_docker:
           docker_layer_caching: true            
       - run:
