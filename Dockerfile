@@ -2,7 +2,7 @@ FROM python:3.7.3-stretch
 
 ## Step 1:
 # Create a working directory
-WORKDIR /app
+WORKDIR 
 
 
 ## Step 2:
@@ -14,7 +14,7 @@ WORKDIR /app
 # Install packages from requirements.txt
 # hadolint ignore=DL3013
    RUN pip3 install --no-cache-dir --upgrade pip&&\ 
-    pip3 install pypi.python.org -r requiremennnnts.txt
+    pip3 install pypi.python.org -r requirements.txt
 
 ## Step 4:
 # Expose port 80
