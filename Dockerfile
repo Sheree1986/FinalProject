@@ -14,7 +14,7 @@ WORKDIR /app
 # Install packages from requirements.txt
 # hadolint ignore=DL3013
    RUN pip3 install --no-cache-dir --upgrade pip&&\ 
-    pip3 install pypi.python.org -r requirements.txt
+    pip3 install pypi.python.org -r requiremennnnts.txt
 
 ## Step 4:
 # Expose port 80
