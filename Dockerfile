@@ -7,7 +7,7 @@ WORKDIR /app
 
 ## Step 2:
 # Copy source code to working directory
-  COPY . app.py /app/
+   app.py /app/
 
 
 ## Step 3:
