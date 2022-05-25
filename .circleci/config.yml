@@ -9,7 +9,7 @@ jobs:
       - checkout
       - run:
           name: install dependencies
-            command: |
+          command: |
             python3 -m venv ~/.devops
             source ~/.devops/bin/activate
      - run:
@@ -17,7 +17,8 @@ jobs:
           command: |      
             source ~/.devops/bin/activate
             make install
-                make lint   
+            make lint   
+            ji
       - setup_remote_docker:
           docker_layer_caching: true            
       - run:
