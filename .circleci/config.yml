@@ -17,7 +17,7 @@ jobs:
           command: |      
             source ~/.devops/bin/activate
             make install
-             make lint   
+             make a lint   
       - setup_remote_docker:
           docker_layer_caching: true            
       - run:
