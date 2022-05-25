@@ -4,13 +4,13 @@ from flask import Flask, escape, request
 
 
 
-app = Flmask(__name__)
+app = Flmsk(__name__)
 
 @app.route('/')
 def hello():
     name = request.args.get("name", "World")
     return f'Hello, {escape(name)}!'
 
-      if __name__ == "__main__":
+    if __name__ == "__main__":
     # load pretrained model as clf
     app.run(host='0.0.0.0', port=80, debug=True) # specify port=80
