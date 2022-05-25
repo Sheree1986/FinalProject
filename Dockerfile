@@ -2,7 +2,7 @@ FROM python:3.7.3-stretch
 
 ## Step 1:
 # Create a working directory
-WORKDIR 
+WORKDIR /app
 
 
 ## Step 2:
@@ -18,9 +18,9 @@ WORKDIR
 
 ## Step 4:
 # Expose port 80
-EXPOSE 80
+                  EXPOSE 80
 
 
 ## Step 5:
 # Run app.py at container launch
-CMD ["python", "app.py"]
+                    CMD ["python", "app.py"]
