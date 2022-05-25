@@ -9,10 +9,10 @@ jobs:
       - checkout
       - run:
           name: install dependencies
-          command: |
+            command: |
             python3 -m venv ~/.devops
             source ~/.devops/bin/activate
-      - run:
+     - run:
           name: code linting 
           command: |      
             source ~/.devops/bin/activate
